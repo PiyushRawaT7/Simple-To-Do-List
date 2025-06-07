@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #8e44ad, #f39c12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo{
+    min-height: 200px;
+    width: 500px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+    border-radius: 10px;
+}
+
+.todo h2{
+    font-weight: 800;
+    padding: 30px 0 20px 20px;
+    position: relative;
+}
+
+.count{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 25px;
+}
+
+.count p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.add-task{
+    width: 90%;
+    height: 40px;
+    margin-left: 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(208, 203, 203);
+}
+
+.add-task input{
+    background-color: transparent;
+    width: 80%;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+input::placeholder{
+    color: white;
+    font-weight: 200;
+    font-size: 13px;
+}
+
+.add-task button{
+    width: 20%;
+    border-radius: 50px;
+    height: 100%;
+    background-color: rgb(255, 89, 0);
+    border: none;
+    font-size: 30px;
+    color: white;
+}
+
+.task{
+    padding: 20px 0 0 20px;
+}
+
+ul li{
+   width: 95%;
+   height: 40px; 
+   list-style: none;
+   font-size: 20px;
+   padding: 12px 8px 35px 40px;
+   margin-bottom: 20px;
+   user-select: none;
+   cursor: pointer;
+   position: relative;
+   border-radius: 10px;
+}
+
+ul li:hover{
+    background-color: lightgreen;
+}
+
+ul li::before{
+    content: '';
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    border: 2px solid black;
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    background-color: white;
+}
+
+ul .checked{
+    color: grey;
+    text-decoration: line-through;
+}
+
+ul li.checked:hover{
+    background-color: transparent;
+}
+
+ul li.checked::before {
+    background-color: orange;
+}
+
+ul li span{
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-right: 3px;
+}
+
+ul li span:hover{
+    background: rgb(232, 52, 52);
+}
